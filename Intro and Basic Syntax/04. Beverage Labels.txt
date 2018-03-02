@@ -1,0 +1,14 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        var name = Console.ReadLine();
+        var volume = int.Parse(Console.ReadLine());
+        var calories = ((double)volume / 100) * int.Parse(Console.ReadLine());
+        var sugar = ((double)volume / 100) * int.Parse(Console.ReadLine());
+        Console.WriteLine($"{volume}ml {name}:");
+        Console.WriteLine($"{calories}kcal, {sugar}g sugars");
+    }
+}

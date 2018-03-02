@@ -1,0 +1,13 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        var part1 = int.Parse(Console.ReadLine());
+        var part2 = int.Parse(Console.ReadLine());
+        var part3 = int.Parse(Console.ReadLine());
+        var part4 = int.Parse(Console.ReadLine());
+        Console.WriteLine($"{part1:D4} {part2:D4} {part3:D4} {part4:D4}");
+    }
+}
