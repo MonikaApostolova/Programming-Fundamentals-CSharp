@@ -1,0 +1,25 @@
+using System;
+using System.Linq;
+
+class Junk
+{
+    static void Main()
+    {
+        var noun = Console.ReadLine();
+        if (noun.Last() == 'y')
+        {
+            noun = noun.Remove(noun.Length - 1, 1);
+            noun = noun.Insert(noun.Length, "ies");
+        }
+        else if (noun.Last() == 'o' || noun.Last() == 's' || noun.Last() == 'x' || noun.Last() == 'z' || noun.EndsWith("ch")
+            || noun.EndsWith("sh"))
+        {
+            noun = noun.Insert(noun.Length, "es");
+        }
+        else 
+        {
+            noun = noun.Insert(noun.Length, "s");
+        }
+        Console.WriteLine(noun);
+    }
+}

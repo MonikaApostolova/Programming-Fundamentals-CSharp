@@ -1,0 +1,19 @@
+using System;
+
+class Junk
+{
+    static void Main()
+    {
+        var lines = int.Parse(Console.ReadLine());
+        var counter = 1;
+        for (int i = 1; i <= lines; i++)
+        {
+            for (int j = 0; j < counter; j++)
+            {
+                Console.Write($"{i} ");
+            }
+            Console.WriteLine();
+            counter++;
+        }
+    }
+}

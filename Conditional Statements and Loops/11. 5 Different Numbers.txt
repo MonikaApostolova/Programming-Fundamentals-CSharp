@@ -1,0 +1,41 @@
+using System;
+
+class Junk
+{
+    static void Main()
+    {
+        var a = int.Parse(Console.ReadLine());
+        var b = int.Parse(Console.ReadLine());
+        var start = Math.Min(a, b);
+        var end = Math.Max(a, b);
+        if (Math.Abs(a - b) >= 5)
+        {
+            for (int first = start; first <= end; first++)
+            {
+                for (int second = start; second <= end; second++)
+                {
+                    for (int third = start; third <= end; third++)
+                    {
+                        for (int fourth = start; fourth <= end; fourth++)
+                        {
+                            for (int fifth = start; fifth <= end; fifth++)                                
+                            {
+                                if (second <= first || third <= second|| fourth <= third || fifth <= fourth) continue;
+                                else
+                                {
+                                    Console.Write(first + " ");
+                                    Console.Write(second + " ");
+                                    Console.Write(third + " ");
+                                    Console.Write(fourth + " ");
+                                    Console.WriteLine(fifth);
+                                }                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        else
+            Console.WriteLine("No");
+    }
+}

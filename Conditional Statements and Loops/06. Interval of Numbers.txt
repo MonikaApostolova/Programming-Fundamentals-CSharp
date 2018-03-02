@@ -1,0 +1,14 @@
+using System;
+
+class Junk
+{
+    static void Main()
+    {
+        var one = int.Parse(Console.ReadLine());
+        var two = int.Parse(Console.ReadLine());
+        for (int current = Math.Min(one, two); current <= Math.Max(one, two); current++)
+        {
+            Console.WriteLine(current);
+        }
+    }
+}

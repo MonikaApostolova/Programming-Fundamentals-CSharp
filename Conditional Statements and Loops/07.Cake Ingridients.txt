@@ -1,0 +1,20 @@
+using System;
+
+class Junk
+{
+    static void Main()
+    {
+        var counter = 0;
+        while(true)
+        {
+            var ingredient = Console.ReadLine();
+            if (ingredient == "Bake!")
+            {
+                Console.WriteLine($"Preparing cake with {counter} ingredients.");
+                break;
+            }               
+            Console.WriteLine($"Adding ingredient {ingredient}.");
+            counter++;
+        }
+    }
+}

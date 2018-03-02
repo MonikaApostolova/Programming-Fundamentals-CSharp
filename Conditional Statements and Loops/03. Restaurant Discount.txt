@@ -1,0 +1,60 @@
+using System;
+
+class Junk
+{
+    static void Main()
+    {
+        checked
+            {
+            var people = int.Parse(Console.ReadLine());
+            var package = Console.ReadLine();
+            var priceForHall = 0.0;
+            var totalPrice = 0.0;
+            var discount = 0.0;
+            var pricePerPerson = 0.0;
+            var hall = "";
+            if (people > 120)
+            {
+                Console.WriteLine("We do not have an appropriate hall.");
+                return;
+            }
+            else if (people <= 50)
+            {
+                priceForHall = 2500;
+                hall = "Small Hall";
+            }
+            else if (people <= 100)
+            {
+                priceForHall = 5000;
+                hall = "Terrace";
+            }
+            else if (people <= 120)
+            {
+                priceForHall = 7500;
+                hall = "Great Hall";
+            }
+
+            if (package == "Normal")
+            {
+                totalPrice = priceForHall + 500.0;
+                discount = totalPrice - (0.05 * totalPrice);
+                pricePerPerson = discount / people;
+            }
+            else if (package == "Gold")
+            {
+                totalPrice = priceForHall + 750.0;
+                discount = totalPrice - (0.10 * totalPrice);
+                pricePerPerson = discount / people;
+            }
+            else if (package == "Platinum")
+            {
+                totalPrice = priceForHall + 1000.0;
+                discount = totalPrice - (0.15 * totalPrice);
+                pricePerPerson = discount / people;
+            }
+            Console.WriteLine($"We can offer you the {hall}");
+            Console.WriteLine($"The price per person is {pricePerPerson:F2}$");
+        }
+        
+    }
+}

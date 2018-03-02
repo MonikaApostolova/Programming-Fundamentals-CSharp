@@ -1,0 +1,44 @@
+using System;
+
+class Junk
+{
+    static void Main()
+    {
+        var firstNum = int.Parse(Console.ReadLine());
+        var secondNum = int.Parse(Console.ReadLine());
+        var maxSumBoundry = int.Parse(Console.ReadLine());
+        var stop = false;
+        var combinations = 0;
+        var sum = 0;
+        for (int i = firstNum; i >= 1; i--)
+        {
+            if (stop == true)
+                break;
+            for (int j = 1; j <= secondNum; j++)
+            {
+                if (sum <= maxSumBoundry)
+                {
+                    sum += (i * j) * 3;
+                    combinations++;
+                }
+
+                else
+                {
+                    stop = true;
+                    break;
+                }
+
+            }
+        }
+        if (sum >= maxSumBoundry)
+        {
+            Console.WriteLine($"{combinations} combinations");
+            Console.WriteLine($"Sum: {sum} >= {maxSumBoundry}");
+        }
+        else
+        {
+            Console.WriteLine($"{combinations} combinations");
+            Console.WriteLine($"Sum: {sum}");
+        }
+    }
+}

@@ -1,0 +1,18 @@
+using System;
+
+class Junk
+{
+    static void Main()
+    {
+        var counter = 0;
+
+        while (true)
+        {
+            var isNum = int.TryParse(Console.ReadLine(), out int num);
+            if (isNum == false)
+                break;
+            counter++;
+        }
+        Console.WriteLine(counter);
+    }
+}
