@@ -28,11 +28,8 @@ class Program
                     if (!users.Contains(name))
                     {
                         result.Add(side, new List<string>() { name });
-                        result[side] = result[side].OrderBy(n => n).ToList();
                         users.Add(name);
                     }
-                       
-                  
                 }
 
                 else
@@ -40,7 +37,6 @@ class Program
                     if (!result[side].Contains(name))
                     {
                         result[side].Add(name);
-                        result[side] = result[side].OrderBy(n => n).ToList();
                         users.Add(name);
                     }
                 }
@@ -59,7 +55,6 @@ class Program
                     {
                         result.Add(side, new List<string>() { name });
                         users.Add(name);
-                        result[side] = result[side].OrderBy(n => n).ToList();
                         Console.WriteLine($"{name} joins the {side} side!");
                     }
 
@@ -67,7 +62,6 @@ class Program
                     {
                         result[side].Add(name);
                         users.Add(name);
-                        result[side] = result[side].OrderBy(n => n).ToList();
                         Console.WriteLine($"{name} joins the {side} side!");
                     }
                 }
@@ -76,14 +70,12 @@ class Program
                 {
                     result.Add(side, new List<string>() { name });
                     users.Add(name);
-                    result[side] = result[side].OrderBy(n => n).ToList();
                     Console.WriteLine($"{name} joins the {side} side!");
                 }
 
                 else
                 {
                     result[side].Add(name);
-                    result[side] = result[side].OrderBy(n => n).ToList();
                     Console.WriteLine($"{name} joins the {side} side!");
                 }
             }
